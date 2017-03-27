@@ -151,9 +151,9 @@ After combining both solutions. here are my findings:
 * Maybe a technique of "adding" up the knowledge between different trainins, would improve the accuracy overall.
  
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 43 new images are used to test the accuracy on new images. They can be found [here](https://github.com/antalakas/carnd-term1-p2/tree/master/additional_images)
 38 of them are included by [navoshta], 5 of them are included from [mvirgo].
