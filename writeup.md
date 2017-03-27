@@ -40,6 +40,8 @@ You're reading it! and here is a link to my [carnd-term1-p2](https://github.com/
 
 ###Data Set Summary & Exploration
 
+Initially, all imports are declared and the signames.csv file is loaded for later use
+
 ####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 The code for this step is contained in the third code cell of the IPython notebook.  
@@ -55,33 +57,39 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
-The code for this step is contained in the third code cell of the IPython notebook.  
+The code for this step is contained in the fourth code cell of the IPython notebook.  
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the training data is distributed acroos classes
 
 ![Training examples per class][https://github.com/antalakas/carnd-term1-p2/blob/master/training_examples_per_class.png]
 
+Please also note that the visualization includes sample (10) images per class along with their class name
+
 ###Design and Test a Model Architecture
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+####1. Describe how, and identify where in your code, you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-The code for this step is contained in the fourth code cell of the IPython notebook.
+The code for this step is contained in the code cell 5-6 of the IPython notebook.
 
-As a first step, I decided to convert the images to grayscale because ...
+I normalized the image data scaling in the range of [0, 1] to keep numerical stability for any of the larger mathematical sequences that might be occurring.
+
+The images were converted to grayscale, having in mind that i was going to apply the LeNet architecture as a starting point, as i am rather inexperienced with convnets.
+
+LeNet architecture, accepts grayscaled images
+
+As mentioned in this [paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf), using color channels didn’t seem to improve things a lot.
+
+Also, localized histogram equalization has been applied, as it seems to improve feature extraction even further in our case.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
-
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
-The code for splitting the data into training and validation sets is contained in the fifth code cell of the IPython notebook.  
+The initial pickled image data set came with a validation set already splitted from the training set and in the Part 1 of this discussion it was found to contain 4410 images.
 
-To cross validate my model, I randomly split the training data into a training set and validation set. I did this by ...
-
-My final training set had X number of images. My validation set and test set had Y and Z number of images.
+Validation and testing set also undergo the preprocessing.
 
 The sixth code cell of the IPython notebook contains the code for augmenting the data set. I decided to generate additional data because ... To add more data to the the data set, I used the following techniques because ... 
 
