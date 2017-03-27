@@ -1,7 +1,7 @@
 # carnd-term1-p2
 Udacity CarND, Term 2, Project 2: Traffic Sign Classifier
 
-###List of files
+### List of files
   
 + additional_images
   - folder that contains the additional (new) images, used to test the accurracy of the classifier
