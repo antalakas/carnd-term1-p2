@@ -59,7 +59,7 @@ The code for this step is contained in the third code cell of the IPython notebo
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
-![alt text][image1]
+![Training examples per class][https://github.com/antalakas/carnd-term1-p2/blob/master/training_examples_per_class.png]
 
 ###Design and Test a Model Architecture
 
