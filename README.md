@@ -6,7 +6,7 @@ Udacity CarND, Term 2, Project 2: Traffic Sign Classifier
 + additional_images
   - folder that contains the additional (new) images, used to test the accurracy of the classifier
   
-+ P1.ipynb
++ P2.ipynb
   - the python notebook
   
 + writeup.md
