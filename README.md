@@ -11,3 +11,17 @@ Udacity CarND, Term 2, Project 2: Traffic Sign Classifier
   
 + writeup.md
   - the reflections of the project
+  
++ train_model.*
+  - the saved neural network model
+  
++ report.html
+  - the exported notebook with all the cells executed
+  
++ signnames.csv
+  - a map from class id to class name
+  
+The project is biased by the work from 
+- http://navoshta.com/traffic-signs-classification/
+and
+- https://github.com/mvirgo/Traffic-Sign-Classifier
