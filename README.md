@@ -1,4 +1,4 @@
-# carnd-term1-p1
+# carnd-term1-p2
 Udacity CarND, Term 2, Project 2: Traffic Sign Classifier
 
 ###List of files
