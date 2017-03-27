@@ -13,20 +13,20 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [carnd-term1-p2](https://github.com/antalakas/carnd-term1-p2/blob/master/P2.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 Initially, all imports are declared and the signames.csv file is loaded for later use
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 The code for this step is contained in the third code cell of the IPython notebook.  
 
@@ -39,7 +39,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+#### 2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the fourth code cell of the IPython notebook.  
 
@@ -49,9 +49,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 Please also note that the visualization includes sample (10) images per class along with their class name
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+#### 1. Describe how, and identify where in your code, you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 The code for this step is contained in the code cell 5-6 of the IPython notebook.
 
@@ -65,7 +65,7 @@ As mentioned in this [paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcn
 
 Also, localized histogram equalization has been applied, as it seems to improve feature extraction even further in our case.
 
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+#### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 The initial pickled image data set came with a validation set already splitted from the training set and in the Part 1 of this discussion it was found to contain 4410 images.
 
@@ -85,7 +85,7 @@ Size of the validation set is 4410
 Number of training examples after augmentation and horizontal flipping = 78229
 Number of validation examples after augmentation and horizontal flipping = 9492
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The code for my final model is located in the cells [11, 12] of the ipython notebook. 
 
@@ -110,7 +110,7 @@ My final model consisted of the following layers:
 | Reduce Mean Loss op   |												|
 |:---------------------:|:---------------------------------------------:| 
 
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The code for training the model is located in the cells [11-14] of the ipython notebook. 
 
@@ -123,7 +123,7 @@ To train the model, the following parameters were used:
 * Number of EPOCHS: 120
 * The AdamOptimizer was used
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
@@ -158,7 +158,7 @@ After combining both solutions. here are my findings:
 43 new images are used to test the accuracy on new images. They can be found [here](https://github.com/antalakas/carnd-term1-p2/tree/master/additional_images)
 38 of them are included by [navoshta], 5 of them are included from [mvirgo].
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 The code for making predictions on my final model is located in the cells [15-20] of the Ipython notebook.
 
@@ -168,17 +168,17 @@ The model was able to correctly guess 34 of the 40 traffic signs, which gives an
 
 Three new images had no relevant classes.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the [21] cell of the Ipython notebook. 
-The top five soft max probabilities were also printed. 
-The previous section containing the bar charts give more intuitive overview.
+* The code for making predictions on my final model is located in the [21] cell of the Ipython notebook. 
+* The top five soft max probabilities were also printed. 
+* The previous section containing the bar charts give more intuitive overview.
 
-The 11th image is misinterpreted as Bicycles crossing (correct: Children crossing), but as we can see from the visualization, indeed the processed image is unclear.
-The 17th image is a surprise for me, the speed limit (80) is completely different from roundabout mandatory, while we have many correct predictions for roundabouts.
-The 25th image is interesting: While its class is not existing, it is interpreted as Road narrows on the right and it seems like it.
+* The 11th image is misinterpreted as Bicycles crossing (correct: Children crossing), but as we can see from the visualization, indeed the processed image is unclear.
+* The 17th image is a surprise for me, the speed limit (80) is completely different from roundabout mandatory, while we have many correct predictions for roundabouts.
+* The 25th image is interesting: While its class is not existing, it is interpreted as Road narrows on the right and it seems like it.
 
-####4. Visualize layers of the neural network
+#### 4. Visualize layers of the neural network
 The code for visualizing the layers of the neural network is located in the cells [22-25] of the Ipython notebook.
 For the double curve image from the new image dataset, the first convolutional layer clearly tries to figur out the general sign shape (the triangle, the inner rotated "S")
 The second layer tries to identify fine details like the edges of the triangle and the inner rotated "S" line.
